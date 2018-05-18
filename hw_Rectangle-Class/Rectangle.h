@@ -1,5 +1,5 @@
 #ifndef Rectangle_H
-#def Rectangle_H
+#define Rectangle_H
 
 
 // Function Declarations of the class
@@ -20,15 +20,15 @@ class Rectangle {
   // Accessor Functions
 
   // Mutator Functions
-  double setLength() const;     // Sets x, the length
-  double setWidth() const;      // Sets z, the width
+  void setLength() const;     // Sets the length (between 1 and 20)
+  void setWidth() const;      // Sets the width (between 1 and 20)
   double calculateArea();       // Calculates Area (Length * Width)
   double calculatePerimeter();  // Calculates Perimeter (2*Length)+(2*Width)
   
   private: 
   // Member Variables
-  double x;                     // The length of the rectangle
-  double z;                     // The width of the rectangle
+  double length;                     // The length of the rectangle
+  double width;                     // The width of the rectangle
   
 };
 
