@@ -8,16 +8,16 @@
 *************************/
 
 /* Checklist 
-* [ ] User input for length and width
-* [ ] run calculation for Area and Perimeter
-* [ ] Output results
+* [x] User input for length and width
+* [x] run calculation for Area and Perimeter
+* [x] Output results
+* [ ] Loop try catch
 */
 // Start Header here
 #include "Rectangle.h"
 #include <iostream>
 
 // Global namespace here
-  void getInput();
 
 // START MAIN
 int main() {
@@ -25,15 +25,26 @@ int main() {
      double width = 1.0;
     
   Rectangle One; // using default constructor
+    std::cout << "What is the length of the rectangle you want to calculate?\n";
+    std::cin >> length;
     try {
-      getInput();
-    } 
+      One.setLength(length);
+    }
     catch (const char* msg){
       std::cerr << msg << std::endl;
     }
-    
-    One.setLength(length);
-    One.setWidth(width);
+
+    std::cout << "What is the width of the rectangle you want to calculate?\n";
+    std::cin >> width;
+  std::cout << width;
+    try {      
+      One.setWidth(width);
+    }
+    catch (const char* msg){
+      std::cerr << msg << std::endl;
+    }
+
+
     
     std::cout << "The area of your rectangle is " << One.calculateArea() << std::endl;
     std::cout << "The perimeter of your rectangle is " << One.calculatePerimeter() << std::endl;
@@ -43,11 +54,3 @@ int main() {
 // END OF MAIN
 
 //Function Declarations
-void getInput(){
-  double length = 1.0;
-  double width = 1.0;
-  std::cout << "What is the length of the rectangle you want to calculate?\n";
-  std::cin >> length;
-  std::cout << "What is the width of the rectangle you want to calculate?\n";
-  std::cin >> width;
-}
