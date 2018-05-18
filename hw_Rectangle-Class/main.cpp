@@ -21,10 +21,10 @@
 
 // START MAIN
 int main() {
-     double length = 0.0;
-     double width = 0.0;
+     double length = 1.0;
+     double width = 1.0;
     
-  Rectangle; // using default constructor
+  Rectangle One; // using default constructor
     try {
       getInput();
     } 
@@ -32,11 +32,11 @@ int main() {
       std::cerr << msg << std::endl;
     }
     
-    Rectangle.setLength(length);
-    Rectangle.setWidth(width);
+    One.setLength(length);
+    One.setWidth(width);
     
-    std::cout << "The area of your rectangle is " << Rectangle.calculateArea() << std::endl;
-    std::cout << "The perimeter of your rectangle is " << Rectangle.calculatePerimeter() << std::endl;
+    std::cout << "The area of your rectangle is " << One.calculateArea() << std::endl;
+    std::cout << "The perimeter of your rectangle is " << One.calculatePerimeter() << std::endl;
     
     return 0;
 } 
@@ -44,6 +44,8 @@ int main() {
 
 //Function Declarations
 void getInput(){
+  double length = 1.0;
+  double width = 1.0;
   std::cout << "What is the length of the rectangle you want to calculate?\n";
   std::cin >> length;
   std::cout << "What is the width of the rectangle you want to calculate?\n";
