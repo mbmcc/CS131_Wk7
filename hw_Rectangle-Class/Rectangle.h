@@ -20,8 +20,8 @@ class Rectangle {
   // Accessor Functions
 
   // Mutator Functions
-  void setLength() const;     // Sets the length (between 1 and 20)
-  void setWidth() const;      // Sets the width (between 1 and 20)
+  void setLength(double);     // Sets the length (between 1 and 20)
+  void setWidth(double);      // Sets the width (between 1 and 20)
   double calculateArea();       // Calculates Area (Length * Width)
   double calculatePerimeter();  // Calculates Perimeter (2*Length)+(2*Width)
   

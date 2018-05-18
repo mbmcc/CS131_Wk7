@@ -46,7 +46,7 @@
   // Accessor Functions
 
   // Mutator Functions
-  void Rectangle::setLength(x){
+  void Rectangle::setLength(double x){
     if (0 > x < 20){      // We only want values between 1 and 20
       throw "Set a value between 1 and 20";      // If values aren't correct say so
       x = 1;      // and set the value to the default of 1
@@ -54,7 +54,7 @@
     length = x;
     
   }
-  void Rectangle::setWidth(z){
+  void Rectangle::setWidth(double z){
     if (0 > z < 20){      // We only want values between 1 and 20
       throw "Set a value between 1 and 20";      // If values aren't correct say so
       z = 1;      // and set the value to the default of 1
@@ -62,9 +62,9 @@
 
     width = z;
   }
-  unsigned double Rectangle::calculateArea(){
+  double Rectangle::calculateArea(){
     return length * width;
   }
-  unsigned double Rectangle::calculatePerimeter(){
+  double Rectangle::calculatePerimeter(){
     return 2*length+2*width;
   }
